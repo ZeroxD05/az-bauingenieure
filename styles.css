@@ -468,30 +468,6 @@ section { margin: 0; padding: 1.6rem 0; }
 .service-body h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); color: #f3f8ff; margin-bottom: 0.55rem; padding-left: 4.1rem; }
 .service-body p { color: var(--muted); margin: 0; font-size: 1.02rem; line-height: 1.6; }
 
-.service-icon {
-  position: absolute;
-  top: -1.5rem;
-  left: 1.25rem;
-  width: 3.25rem;
-  height: 3.25rem;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  border: 1px solid rgba(133, 187, 243, 0.36);
-  background: linear-gradient(160deg, rgba(24, 54, 87, 0.95), rgba(17, 33, 53, 0.92));
-  box-shadow: 0 9px 20px rgba(7, 16, 27, 0.48);
-}
-
-.service-icon svg {
-  width: 1.45rem;
-  height: 1.45rem;
-  fill: none;
-  stroke: #9ed4ff;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 .section-services > h2 { margin-bottom: 1.05rem; }
 
 .service-card--statik .service-media {

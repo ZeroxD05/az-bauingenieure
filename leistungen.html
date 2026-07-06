@@ -19,7 +19,7 @@
   <body>
     <header class="site-header">
       <a class="logo" href="index.html">AZ-Bauingineure</a>
-      <nav class="main-nav" aria-label="Hauptnavigation">
+      <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
         <a href="index.html">Home</a>
         <a href="ueber-uns.html">Über uns</a>
         <a href="leistungen.html">Leistungen</a>
@@ -27,7 +27,14 @@
         <a href="referenzen.html">Referenzen</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <a class="btn btn-outline" href="kontakt.html">Projekt anfragen</a>
+      <div class="header-actions">
+        <a class="btn btn-outline" href="kontakt.html">Projekt anfragen</a>
+        <button class="burger-btn" id="burger-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>
@@ -100,5 +107,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      const burgerBtn = document.getElementById('burger-btn');
+      const mainNav = document.getElementById('main-nav');
+
+      if (burgerBtn && mainNav) {
+        burgerBtn.addEventListener('click', () => {
+          const isOpen = mainNav.classList.toggle('is-open');
+          burgerBtn.classList.toggle('is-open', isOpen);
+          burgerBtn.setAttribute('aria-expanded', isOpen);
+          burgerBtn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+        });
+      }
+    </script>
   </body>
 </html>
