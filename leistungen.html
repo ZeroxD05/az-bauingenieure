@@ -51,42 +51,42 @@
 
       <section class="card reveal" style="padding: 1.25rem 1.3rem; margin-bottom: 1rem">
         <div class="service-grid">
-          <article class="service-card service-card--statik">
+          <article class="service-card service-card--statik" data-service="statik" tabindex="0" role="button" aria-label="Mehr zur Leistung Tragwerksplanung / Statik">
             <div class="service-media" aria-hidden="true"></div>
             <div class="service-body">
               <h3>Tragwerksplanung / Statik</h3>
               <p>Verlaessliche statische Konzepte fuer sichere und wirtschaftliche Bauwerke.</p>
             </div>
           </article>
-          <article class="service-card service-card--objektplanung">
+          <article class="service-card service-card--objektplanung" data-service="objektplanung" tabindex="0" role="button" aria-label="Mehr zur Leistung Objektplanung / Entwurfsverfasser">
             <div class="service-media" aria-hidden="true"></div>
             <div class="service-body">
               <h3>Objektplanung / Entwurfsverfasser</h3>
               <p>Entwurfs- und Objektplanung mit Fokus auf Funktion und Genehmigungsfaehigkeit.</p>
             </div>
           </article>
-          <article class="service-card service-card--schallschutz">
+          <article class="service-card service-card--schallschutz" data-service="schallschutz" tabindex="0" role="button" aria-label="Mehr zur Leistung Schallschutz">
             <div class="service-media" aria-hidden="true"></div>
             <div class="service-body">
               <h3>Schallschutz</h3>
               <p>Fachgerechte Schallschutzkonzepte fuer Wohn- und Arbeitsqualitaet.</p>
             </div>
           </article>
-          <article class="service-card service-card--energie">
+          <article class="service-card service-card--energie" data-service="energie" tabindex="0" role="button" aria-label="Mehr zur Leistung Energieberater">
             <div class="service-media" aria-hidden="true"></div>
             <div class="service-body">
               <h3>Energieberater</h3>
               <p>Energieeffiziente Loesungen und Beratung fuer nachhaltige Bauprojekte.</p>
             </div>
           </article>
-          <article class="service-card service-card--brandschutz">
+          <article class="service-card service-card--brandschutz" data-service="brandschutz" tabindex="0" role="button" aria-label="Mehr zur Leistung Brandschutz">
             <div class="service-media" aria-hidden="true"></div>
             <div class="service-body">
               <h3>Brandschutz</h3>
               <p>Praxisnahe Brandschutzplanung fuer sichere Nutzung und regelkonforme Umsetzung.</p>
             </div>
           </article>
-          <article class="service-card service-card--bauleitung">
+          <article class="service-card service-card--bauleitung" data-service="bauleitung" tabindex="0" role="button" aria-label="Mehr zur Leistung Bauleitung / Bauüberwachung">
             <div class="service-media" aria-hidden="true"></div>
             <div class="service-body">
               <h3>Bauleitung / Bauueberwachung</h3>
@@ -96,6 +96,17 @@
         </div>
       </section>
     </main>
+
+    <div class="service-modal" id="service-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
+      <div class="service-modal__backdrop" data-close-modal></div>
+      <div class="service-modal__content">
+        <button class="service-modal__close" type="button" aria-label="Fenster schließen" data-close-modal>×</button>
+        <p class="kicker">Leistung</p>
+        <h3 id="service-modal-title"></h3>
+        <p id="service-modal-text"></p>
+        <ul id="service-modal-details"></ul>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <p>© <span id="year"></span> AZ-Bauingineure</p>
